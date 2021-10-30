@@ -3,17 +3,11 @@ import praw
 import pandas
 import re
 import matplotlib.pyplot as plt
+import confidential
 
 stock = re.compile(r'[$]{1}[A-Za-z]{1,3}[\S]')
 
-reddit = praw.Reddit(
-    client_id="00wQAtulyk-i0LshRWLtHw",
-    client_secret="6lJ2xCCV4ROOpumH6CUI9vKvXr-HQw",
-    user_agent="reddit stock market scraper",
-    username="Hydraphellian",
-
-
-)
+reddit = confidential.confidentialInfo()
 
 def tickersArray():
     stockArray = []
